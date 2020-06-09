@@ -1,6 +1,9 @@
 package edu.handong.csee.java.exmple.collections.linkedlist;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class LinkedList<D> {
 	private ListNode head;
@@ -122,5 +125,13 @@ public class LinkedList<D> {
 			data = newData;
 			link = linkedNode;
 		}
+	}
+
+	public ArrayList<D> sort(Comparator<D> comparator) {
+		
+		ArrayList<D> list = toArrayList();
+		Collections.sort(list,comparator);
+		
+		return list;
 	}
 }
