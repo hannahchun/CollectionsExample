@@ -17,12 +17,16 @@ public class HashSetForMyClassDemo {
 
 		printSet(students);
 		
-		System.out.println("One student removing: 19800821 JC");
+		System.out.println("Set contains 22000999 YH Park: " + students.contains(new Student("22000999", "YH Park")));
+		System.out.println("Set contains 19800821 JC: " + students.contains(new Student("19800821", "JC")));
+		
+		System.out.println("\nOne student removing: 19800821 JC");
 		students.remove(new Student("19800821", "JC"));
 		printSet(students);
 		
-		System.out.println("Set contains 22000999: " + students.contains(new Student("22000999", "YH Park")));
-		System.out.println("Set contains 19800821: " + students.contains(new Student("19800821", "JC Nam")));
+		System.out.println("Set contains 22000999 YH Park: " + students.contains(new Student("22000999", "YH Park")));
+		System.out.println("Set contains 19800821 JC Nam: " + students.contains(new Student("19800821", "JC Nam")));
+		System.out.println("Set contains 19800821 JC: " + students.contains(new Student("19800821", "JC")));
 		
 	}
 
