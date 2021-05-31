@@ -1,6 +1,6 @@
 package edu.handong.csee.java.exmple.collections;
 
-public class Student {
+public class Student implements Comparable<Student> {
 
 	private String studentID;
 	private String name;
@@ -40,6 +40,20 @@ public class Student {
 			return true;
 		
 		return super.equals(obj);
+	}
+
+	@Override
+	public int compareTo(Student student) {
+		
+		int compareResuts = this.getStudentID().compareTo(student.getStudentID());
+		//System.out.println(compareResuts);
+		
+		if(compareResuts>0)
+			return 1;
+		else if(compareResuts<0)
+			return -1;
+		
+		return 0;
 	}
 	
 }
