@@ -40,7 +40,7 @@ public class StringLinkedListWithIterator {
 	
 	public void resetIteration() {
 		current = head;
-		previous = null;
+		previous = null; 
 	}
 	
 	public boolean moreToIterate() {
@@ -96,7 +96,7 @@ public class StringLinkedListWithIterator {
 	}
 	
 	public void deleteCurrentNode() {
-		if((current != null) && (previous == null)) {
+		if((current != null) && (previous != null)) {
 			previous.link = current.link;
 			current = current.link;
 		}else if((current != null) && (previous == null)) {

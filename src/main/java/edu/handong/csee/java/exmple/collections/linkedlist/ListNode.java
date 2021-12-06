@@ -5,13 +5,13 @@ public class ListNode {
 	private ListNode link;
 	
 	public ListNode() {
-		link = null;
-		data = null;
+		data=null;
+		link=null;
 	}
 	
 	public ListNode(String newData, ListNode linkedNode) {
-		data = newData;
-		link = linkedNode;
+		data=newData;
+		link=linkedNode;
 	}
 
 	public String getData() {
@@ -29,6 +29,5 @@ public class ListNode {
 	public void setLink(ListNode link) {
 		this.link = link;
 	}
-	
 	
 }

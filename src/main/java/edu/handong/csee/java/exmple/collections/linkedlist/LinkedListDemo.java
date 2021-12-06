@@ -12,7 +12,8 @@ public class LinkedListDemo {
 		list.addANodeToStart("One");
 		list.addANodeToStart("Two");
 		list.addANodeToStart("Three");
-		System.out.println("List has " + list.length() + " entries.");
+		
+		System.out.println("List has" + list.length() + "entries.");
 		
 		list.showList();
 		
@@ -23,8 +24,9 @@ public class LinkedListDemo {
 		
 		list.deleteHeadNode();
 		list.deleteHeadNode();
+		
 		System.out.println("Start of list: ");
 		list.showList();
-		System.out.println("End of list: ");
+		System.out.println("End of list: "); 
 	}
 }

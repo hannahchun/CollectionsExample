@@ -1,7 +1,6 @@
 package edu.handong.csee.java.exmple.collections;
 
-public class Student implements Comparable<Student> {
-
+public class Student implements Comparable<Student>{
 	private String studentID;
 	private String name;
 	
@@ -9,51 +8,47 @@ public class Student implements Comparable<Student> {
 		setStudentID(id);
 		setName(name);
 	}
-	
-	public String getStudentID() {
-		return studentID;
+
+	public void setName(String name) {
+		this.name=name;
 	}
-	
+
 	public void setStudentID(String studentID) {
-		this.studentID = studentID;
+		this.studentID=studentID;
 	}
 	
 	public String getName() {
 		return name;
 	}
 	
-	public void setName(String name) {
-		this.name = name;
+	public String getStudentID() {
+		return studentID;
 	}
 	
-	@Override
+	@Override 
 	public int hashCode() {
-		return studentID.hashCode(); // saved in the same memory bucket when they are same.
+		return studentID.hashCode();
 	}
-
-	@Override
+	
+	@Override 
 	public boolean equals(Object obj) {
-		
 		Student studentToCompare = (Student) obj;
 		
 		if(this.getStudentID().equals(studentToCompare.getStudentID()))
 			return true;
-		
-		return super.equals(obj);
-	}
-
-	@Override
-	public int compareTo(Student student) {
-		
-		int compareResuts = this.getStudentID().compareTo(student.getStudentID());
-		//System.out.println(compareResuts);
-		
-		if(compareResuts>0)
-			return 1;
-		else if(compareResuts<0)
-			return -1;
-		
-		return 0;
+		else
+			return false;
 	}
 	
+	@Override 
+	public int compareTo(Student student) {
+		return this.getStudentID().compareTo(student.getStudentID());
+		/*
+		int compareResults = this.getStudentID().compareTo(student.getStudentID());
+		if(compareResults>0)
+			return 1;
+		else if(compareResults<0)
+			return -1;
+		return 0; */
+	}
 }
